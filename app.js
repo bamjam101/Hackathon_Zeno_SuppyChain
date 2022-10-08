@@ -71,6 +71,24 @@ app.get("/login", (req, res) => {
     res.render('login', { page });
 })
 
+app.get("/admin", (req, res) => {
+    const page = {
+        title: "Admin",
+        css: "css/admin.css",
+        js: "js/admin.js"
+    }
+    res.render('admin', { page });
+})
+
+app.get("/distributor", (req, res) => {
+    const page = {
+        title: "Distributor",
+        css: "css/distributor.css",
+        js: "js/distributor.js"
+    }
+    res.render('distributor', { page });
+})
+
 app.get("/main", (req, res) => {
     res.render('MainPage_digiChambers');
 })

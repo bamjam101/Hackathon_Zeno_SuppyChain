@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %> 
+
+<body>
+    <%- include('partials/navbar') %> 
+
+     <!-- Alert -->
+     <div id="popup">
+        <div>
+            <% if (Data.Alert != "") {%>
+            <!-- <p><%# Data.Alert %></p> -->
+            <input type="submit" value="x" onclick="remove()">
+            <%# }%>
+        </div>
+    </div>
+
+    <script>
+        function remove(){
+            const element = document.getElementById("popup");
+            element.remove();
+        }
+    </script>
+    <!-- profile Section -->
+    <div class = "profile-flex">
+        <div class="profile">
+            <h2><img id ="profimag" src="https://icon-library.com/images/coder-icon/coder-icon-13.jpg" alt=""> Profile</h2>
+            <div class="details">
+                 <ul >
+                    <%# if (Data.Profile != {}){ for (var prop in Data.Profile ) { %>
+                        <li> <%# prop %> : <%# Data.Profile[prop] %></li>
+                    <%# } } else {%>
+                        <li>No data available</li>
+                    <%# } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Table / Collection Section -->
+    <div>
+        <h2>Requests on the Transport Network</h2>
+        <div class = "box">
+        
+             <%# if (Data.Requests != []) { for (const Request of Data.Requests) { %>
+            <div class="card">
+                <div class = "container">
+                    <form action="/distributor/accept-request" method="post">
+                        <%# if (Request != {}) { %>
+                        <label for="Product"> Product :</label>
+                        <input type="text" name="Product" value= <%= Request.Product %> readonly><br><br>
+                        <label for="Material"> Material :</label>
+                        <input type="text" name="Material" value= <%= Request.Material %> readonly><br><br>
+                        <label for="TransportAddress"> Transport :</label>
+                        <input type="text"  name="TransportAddress" value= <%= Request.Transport %> readonly><br><br>
+                        <div class="btn-wrapper"><input id="accept" type="submit" value="Accept Request"></div>
+                        <%# }%>
+                    </form>
+                </div>
+            </div>
+            <%# } } %>
+</div>
+</div>
+    <div>
+        <img id = "bg" src="http://coritraveller.com/wp-content/uploads/2020/03/distributor.png" alt="">
+    </div>
+
+    <%- include('partials/footer') %> 
+</body>
+</html>

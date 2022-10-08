@@ -1,0 +1,98 @@
+body{
+    background-image: var(--flow);
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: white;
+    animation: flow 20s infinite alternate;
+}
+
+@keyframes flow {
+    0%{
+        background-position: left;
+    } 100% {
+        background-position: right;
+    }
+}
+
+h2, h3 {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.45s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+.card {
+    margin: 10px;
+    padding: 10px;
+}
+
+.container input {
+    border: none;
+}
+
+.outer-container {
+    padding: 2vh 0;
+}
+
+input {
+    text-align: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#g,
+#r {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 1rem;
+}
+
+#r {
+    background-color: #f44336;
+}
+
+#bg {
+    position: absolute;
+    right: 0px;
+    bottom: 0px; 
+    z-index: -1;   
+}
