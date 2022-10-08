@@ -89,6 +89,15 @@ app.get("/distributor", (req, res) => {
     res.render('distributor', { page });
 })
 
+app.get("/tracking", (req, res) => {
+    const page = {
+        title: "Tracking",
+        css: "css/tracking.css",
+        js: "js/tracking.js"
+    }
+    res.render('Tracking', { page });
+})
+
 app.get("/main", (req, res) => {
     res.render('MainPage_digiChambers');
 })
