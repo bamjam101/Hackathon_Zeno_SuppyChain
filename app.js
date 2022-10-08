@@ -42,14 +42,43 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 
-
-
+// get routes for all the webpages
 
 app.get("/", (req, res) => {
     res.render('index');
 })
 
+app.get("/index2", (req, res) => {
+    res.render('index_2options');
+})
 
+app.get("/index4", (req, res) => {
+    res.render('index_4options');
+})
+
+app.get("/login", (req, res) => {
+    res.render('Login_Signup');
+})
+
+app.get("/main", (req, res) => {
+    res.render('MainPage_digiChambers');
+})
+
+app.get("/main2", (req, res) => {
+    res.render('MainPage_distr');
+})
+
+app.get("/menu", (req, res) => {
+    res.render('MainPage_manu');
+})
+
+app.get("/retail", (req, res) => {
+    res.render('MainPage_retail');
+})
+
+app.get("/tracking", (req, res) => {
+    res.render('Tracking');
+})
 
 
 // To start the server 
