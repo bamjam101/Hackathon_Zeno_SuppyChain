@@ -1,25 +1,28 @@
 {
-  "dependencies": {
-    "body-parser": "^1.20.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.3",
-    "mongoose": "^6.3.0"
-  },
-  "name": "quimzz",
+  "name": "healthcare",
   "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bamjam101/Xel-Quiz.git"
+    "url": "git+https://github.com/bamjam101/Hackathon_healthcare.git"
   },
-  "author": "bamjam101",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bamjam101/Xel-Quiz/issues"
+    "url": "https://github.com/bamjam101/Hackathon_healthcare/issues"
   },
-  "homepage": "https://github.com/bamjam101/Xel-Quiz#readme",
-  "description": ""
+  "homepage": "https://github.com/bamjam101/Hackathon_healthcare#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "joi": "^17.6.2",
+    "session": "^0.1.0"
+  }
 }
