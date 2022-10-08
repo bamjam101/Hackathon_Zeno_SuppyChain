@@ -36,6 +36,9 @@ body{
 
 .container input {
     border: none;
+    height: 3vh;
+    padding: 1rem 0;
+    text-align: center;
 }
 
 #popup div {
@@ -73,7 +76,7 @@ h2, h3 {
     padding: 10px 0;
     box-shadow: #4CAF50;
     width: 100%;
-    background-color: #ffffff;
+    background-color: rgba(0,0,0,0.2);
 }
 
 .container {
@@ -103,6 +106,7 @@ input[type=submit] {
 #bg {
     position: absolute;
     right: 0px;
-    bottom: 0px; 
-    z-index: -1;   
+    bottom: 0; 
+    z-index: -1;
+    opacity: 50%;  
 }

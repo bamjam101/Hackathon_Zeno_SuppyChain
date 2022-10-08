@@ -8,7 +8,7 @@
      <!-- Alert -->
      <div id="popup">
         <div>
-            <% if (Data.Alert != "") {%>
+            <%# if (Data.Alert != "") {%>
             <!-- <p><%# Data.Alert %></p> -->
             <input type="submit" value="x" onclick="remove()">
             <%# }%>
@@ -50,11 +50,11 @@
                     <form action="/distributor/accept-request" method="post">
                         <%# if (Request != {}) { %>
                         <label for="Product"> Product :</label>
-                        <input type="text" name="Product" value= <%= Request.Product %> readonly><br><br>
+                        <input type="text" name="Product" value= <%#= Request.Product %> readonly><br><br>
                         <label for="Material"> Material :</label>
-                        <input type="text" name="Material" value= <%= Request.Material %> readonly><br><br>
+                        <input type="text" name="Material" value= <%#= Request.Material %> readonly><br><br>
                         <label for="TransportAddress"> Transport :</label>
-                        <input type="text"  name="TransportAddress" value= <%= Request.Transport %> readonly><br><br>
+                        <input type="text"  name="TransportAddress" value= <%#= Request.Transport %> readonly><br><br>
                         <div class="btn-wrapper"><input id="accept" type="submit" value="Accept Request"></div>
                         <%# }%>
                     </form>
