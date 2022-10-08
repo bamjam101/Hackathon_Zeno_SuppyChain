@@ -1,0 +1,111 @@
+body{
+    background-image: var(--flow);
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.2rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+    animation: flow 20s infinite alternate;
+}
+
+h2, h3 {
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+}
+.card {
+/* Add shadows to create the "card" effect */
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.45s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+
+.form-for-data-upload {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+input{
+    padding: 6px 10px;
+    margin: 8px 0;
+}
+input[type=submit]{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.card {
+    background-color: white;
+    margin: 10px 0;
+    padding: 10px;
+}
+.container input{
+    border: none;
+}
+#popup div{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#popup div p{
+    display: inline;
+    margin-right: 20px;
+}
+li{
+    list-style-type: none;
+}
+
+#profimag{
+    width: 40px;
+}
+.profile-container {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.profile{
+    box-shadow: #4CAF50;
+    width: 50%;
+}
+
+.form-for-data-upload{
+    /* margin: 0px 0px 0px 10px; */
+    padding: 10px 0;
+}
+.dataform div{
+    padding-bottom: 10px;
+}
+
+#bg {
+    position: absolute;
+    right: 0px;
+    bottom: 0px; 
+    z-index: -1;   
+    opacity: 50%;
+}
