@@ -45,19 +45,30 @@ app.set('view engine', 'ejs')
 // get routes for all the webpages
 
 app.get("/", (req, res) => {
-    res.render('index');
+    const page = {
+        title: "Home",
+        css: "css/home.css",
+        js: "js/home.js"
+    }
+    res.render('home', { page });
 })
 
-app.get("/index2", (req, res) => {
-    res.render('index_2options');
-})
-
-app.get("/index4", (req, res) => {
-    res.render('index_4options');
+app.get("/register", (req, res) => {
+    const page = {
+        title: "Register",
+        css: "css/register.css",
+        js: "js/register.js"
+    }
+    res.render('register', { page });
 })
 
 app.get("/login", (req, res) => {
-    res.render('Login_Signup');
+    const page = {
+        title: "Login",
+        css: "css/login.css",
+        js: "js/login.js"
+    }
+    res.render('login', { page });
 })
 
 app.get("/main", (req, res) => {

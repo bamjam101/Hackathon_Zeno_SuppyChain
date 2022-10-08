@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+
+  <body>
+    <%- include('partials/navbar') %>
+    <main class="container">
+      <div class="form" id="proceed">
+        <br /><br />
+        <form name="inputForm">
+          <br />
+
+          <label>Full Name</label>
+          <input
+            id="fname"
+            name="fname"
+            type="text"
+            placeholder="Type here..."
+            required
+          />
+
+          <br />
+
+          <label>E-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="text"
+            placeholder="Type here..."
+            required
+          />
+
+          <br />
+
+          <label>Status</label>
+          <label for="status0">
+            <input
+              class="toggle"
+              type="radio"
+              value="student"
+              name="status"
+              id="status0"
+            />Retailer
+          </label>
+          <label for="status1">
+            <input
+              class="toggle"
+              type="radio"
+              value="employed"
+              name="status"
+              id="status1"
+            />Customer
+          </label>
+          <label for="status2">
+            <input
+              class="toggle"
+              type="radio"
+              value="others"
+              name="status"
+              id="status2"
+            />Manufacturer
+          </label>
+          <label for="status3">
+            <input
+              class="toggle"
+              type="radio"
+              value="others"
+              name="status"
+              id="status3"
+            />Distributor
+          </label>
+
+          <div class="button">
+            <a id="proceedBtn" onclick="mainFunction()">
+              <span class="hover">Hover Here</span>
+              <span class="change">Proceed</span>
+            </a>
+          </div>
+        </form>
+      </div>
+
+      <div id="One" class="formTwo">
+        <form action="account.html" name="inputFormTwo">
+          <label>UserName</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Create an username"
+            required
+          />
+
+          <br />
+
+          <label>Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Create a password"
+            required
+          />
+
+          <br />
+
+          <label>Confirm Password</label>
+          <input
+            id="confirmPass"
+            name="password"
+            type="password"
+            placeholder="Confirm your password"
+            required
+          />
+
+          <br />
+          
+          <button onclick="details()" id="submitBtn" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </main>
+    <%- include('partials/footer') %>
+
+    <style>
+      body {
+        height: 100vh;
+        background-image: var(--flow);
+        background-size: 300%;
+        background-repeat: no-repeat;
+        background-position: left;
+        animation: flow 20s infinite alternate;
+      }
+
+      @keyframes flow {
+        0% {
+          background-position: left;
+        }
+        100% {
+          background-position: right;
+        }
+      }
+    </style>
+  </body>
+</html>

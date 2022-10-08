@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/navbar') %>
+    <div class="Login">
+      <div id="One" class="formTwo">
+        <form action="account.html" name="inputFormTwo">
+          <label>UserName</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Create an username"
+            required
+          />
+
+          <label>Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Create a password"
+            required
+          />
+          <div class="checkbox-wrapper">
+            <label class="checkbox" for="termsAndConditions">
+              <input
+                class="check"
+                type="checkbox"
+                value="Accept"
+                name="termsAndConditions"
+                id="termsAndConditions"
+                required
+              /><span>Agree to the Terms & conditions</span>
+            </label>
+          </div>
+          <div class="btn-wrapper">
+            <button id="submitBtn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <%- include('partials/footer') %>
+
+    <style>
+        body {
+          height: 100vh;
+          background-image: var(--flow);
+          background-size: 300%;
+          background-repeat: no-repeat;
+          background-position: left;
+          animation: flow 20s infinite alternate;
+        }
+  
+        @keyframes flow {
+          0% {
+            background-position: left;
+          }
+          100% {
+            background-position: right;
+          }
+        }
+      </style>
+  </body>
+</html>
