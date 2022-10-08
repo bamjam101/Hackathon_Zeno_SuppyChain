@@ -90,34 +90,37 @@ app.get("/distributor", (req, res) => {
 })
 
 app.get("/tracking", (req, res) => {
+
     const page = {
         title: "Tracking",
         css: "css/tracking.css",
         js: "js/tracking.js"
     }
+
     res.render('Tracking', { page });
 })
 
-app.get("/main", (req, res) => {
-    res.render('MainPage_digiChambers');
-})
-
-app.get("/main2", (req, res) => {
-    res.render('MainPage_distr');
-})
-
 app.get("/menu", (req, res) => {
-    res.render('MainPage_manu');
+    
+    const page = {
+        title: "Menu",
+        css: "css/menu.css",
+        js: "js/menu.js"
+    }
+
+    res.render('menu', { page });
 })
 
 app.get("/retail", (req, res) => {
-    res.render('MainPage_retail');
-})
 
-app.get("/tracking", (req, res) => {
-    res.render('Tracking');
-})
+    const page = {
+        title: "Retail",
+        css: "css/retail.css",
+        js: "js/retail.js"
+    }
 
+    res.render('retail', { page });
+})
 
 // To start the server 
 app.listen(5000, () => {

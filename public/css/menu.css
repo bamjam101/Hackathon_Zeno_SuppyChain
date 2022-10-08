@@ -9,11 +9,14 @@ body{
     flex-direction: column;
     color: white;
     font-size: 1.2rem;
-    max-width: 100vw;
+    /* max-width: 100vw; */
     overflow-x: hidden;
     animation: flow 20s infinite alternate;
 }
-
+.nav-bar{
+    width: 99vw;
+    
+}
 h2, h3 {
     text-align: center;
     padding: 1rem 0 2rem 0;
@@ -59,7 +62,6 @@ input[type=submit]{
     font-size: 16px;
 }
 .card {
-    background-color: white;
     margin: 10px 0;
     padding: 10px;
 }

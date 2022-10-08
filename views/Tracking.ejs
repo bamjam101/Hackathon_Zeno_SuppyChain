@@ -12,30 +12,30 @@
 
     <div>
         <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Tracking of Asset </h2>
-            <%# if ("asset" in Data && Data.asset.length == 0) {%>
+            <% if ("asset" in Data && Data.asset.length == 0) {%>
                 <h3>No stock present</h3>  
-                <%# } %>
+                <% } %>
             <div class = "box">
-                    <%# if (Data.asset) { for (const request of Data.asset) { %>
+                    <% if (Data.asset) { for (const request of Data.asset) { %>
                         <div class="card">
                             <div class = "container">
                                 <form action="/digichambers/approve-reject-request" method="get">
-                                    <%# if (request != {}) { %>
+                                    <% if (request != {}) { %>
                                         <label for="country"> Operation :</label>
-                                        <input type="text" name="Owner" readonly value= <%#= request.Operation %> ><br><br>
+                                        <input type="text" name="Owner" readonly value= <%= request.Operation %> ><br><br>
                                         <label for="country"> From :</label>
-                                        <input type="text" name="From" readonly value= <%#= request.From %> ><br><br>
+                                        <input type="text" name="From" readonly value= <%= request.From %> ><br><br>
                                         <label for="country"> To :</label>
-                                        <input type="text"  name="To" readonly value= <%#= request.To %> ><br><br>
-                                    <%# } %>
+                                        <input type="text"  name="To" readonly value= <%= request.To %> ><br><br>
+                                    <% } %>
                                 </form>
                             </div>
                         </div>
-                <%# } } %>
+                <% } } %>
             </div>
     </div>
 
-    
+
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px" y="0px" height="99vh" viewBox="0 0 2000 1200" enable-background="new 0 0 2000 1200"
         xml:space="preserve">

@@ -9,7 +9,7 @@
      <div id="popup">
         <div>
             <%# if (Data.Alert != "") {%>
-            <!-- <p><%# Data.Alert %></p> -->
+            <p><%#= Data.Alert %></p>
             <input type="submit" value="x" onclick="remove()">
             <%# }%>
         </div>
@@ -28,7 +28,7 @@
             <div class="details">
                  <ul >
                     <%# if (Data.Profile != {}){ for (var prop in Data.Profile ) { %>
-                        <li> <%# prop %> : <%# Data.Profile[prop] %></li>
+                        <li> <%# prop %> : <%#= Data.Profile[prop] %></li>
                     <%# } } else {%>
                         <li>No data available</li>
                     <%# } %>
