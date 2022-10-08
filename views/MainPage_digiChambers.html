@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- // Request raised -->
+    <div>
+        <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Requests needed to review</h2>
+            <!-- <%#if (Data.Requests.length == 0) {%> -->
+                <h3>No Requests present</h3>  
+                <!-- <%# } %> -->
+            <div class = "box">
+                    <% if (Data.Requests) { for (const request of Data.Requests) { %>
+                        <div class="card">
+                            <div class = "container">
+                                <form action="/digichambers//approve-reject-request" method="get">
+                                    <!-- <% if (request != {}) { %> -->
+                                        <label for="country"> ID :</label>
+                                        <input type="text" name="_id" readonly value= <%# request._id %> ><br><br>
+                                        <label for="country"> Owner :</label>
+                                        <input type="text" name="Owner" readonly value= <%# request.Owner %> ><br><br>
+                                        <label for="country"> Material :</label>
+                                        <input type="text" name="Material" readonly value= <%# request.Material %> ><br><br>
+                                        <label for="country"> Status :</label>
+                                        <input type="text"  name="Status" readonly value= <%# request.Status %> ><br><br>
+                                        <input type="submit" value="Accept" name = "ops" id = "g">
+                                        <input type="submit" value="Reject" name = "ops" id = "r">
+                                    <!-- <%# } %> -->
+                                </form>
+                            </div>
+                        </div>
+                <!-- <%# } } %> -->
+            </div>
+    </div>
+
+
+
+    <!-- // Approved Requests -->
+    <div>
+        <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Approved Requests</h2>
+            <% if (Data.Approved.length == 0) {%>
+                <h3>No Requests present</h3>  
+                <% } %>
+            <div class = "box">
+                    <% if (Data.Approved) { for (const request of Data.Approved) { %>
+                        <div class="card">
+                            <div class = "container">
+                                <form action="/digichambers/approve-reject-request" method="get">
+                                    <% if (request != {}) { %>
+                                        <label for="country"> ID :</label>
+                                        <input type="text" name="_id" readonly value= <%= request._id %> ><br><br>
+                                        <label for="country"> Owner :</label>
+                                        <input type="text" name="Owner" readonly value= <%= request.Owner %> ><br><br>
+                                        <label for="country"> Material :</label>
+                                        <input type="text" name="Material" readonly value= <%= request.Material %> ><br><br>
+                                        <label for="country"> Status :</label>
+                                        <input type="text"  name="Status" readonly value= <%= request.Status %> ><br><br>
+                                        <!-- <input type="submit" value="Accept" name = "ops">
+                                        <input type="submit" value="Reject" name = "ops"> -->
+                                    <!-- <%# } %> -->
+                                </form>
+                            </div>
+                        </div>
+                <!-- <%# } } %> -->
+            </div>
+    </div>
+
+    <!-- // Rejected Requests -->
+    <div>
+        <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Rejected Requests</h2>
+            <!-- <%# if (Data.Rejected.length == 0) {%> -->
+                <h3>No Requests present</h3>  
+                <!-- <%# } %> -->
+            <div class = "box">
+                    <% if (Data.Rejected) { for (const request of Data.Rejected) { %>
+                        <div class="card">
+                            <div class = "container">
+                                <form action="/digichambers/approve-reject-request" method="get">
+                                    <%# if (request != {}) { %>
+                                        <label for="country"> ID :</label>
+                                        <input type="text" name="_id" readonly value= <%# request._id %> ><br><br>
+                                        <label for="country"> Owner :</label>
+                                        <input type="text" name="Owner" readonly value= <%# request.Owner %> ><br><br>
+                                        <label for="country"> Material :</label>
+                                        <input type="text" name="Material" readonly value= <%# request.Material %> ><br><br>
+                                        <label for="country"> Status :</label>
+                                        <input type="text"  name="Status" readonly value= <%# request.Status %> ><br><br>
+                                        <!-- <input type="submit" value="Accept" name = "ops">
+                                        <input type="submit" value="Reject" name = "ops"> -->
+                                    <!-- <%# } %> -->
+                                </form>
+                            </div>
+                        </div>
+                <!-- <%# } } %> -->
+            </div>
+    </div>
+
+
+
+
+    <div>
+        <img id = "bg" width="500px" src="https://digitalchamber.org/wp-content/uploads/2016/12/chamber-logo-PNG.png" alt="">
+    </div>
+
+
+</body>
+</html>
