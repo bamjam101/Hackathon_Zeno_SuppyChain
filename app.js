@@ -47,7 +47,9 @@ app.set('view engine', 'ejs')
 
 
 
-
+app.use("/", (req, res) => {
+    res.render('index');
+})
 
 
 
