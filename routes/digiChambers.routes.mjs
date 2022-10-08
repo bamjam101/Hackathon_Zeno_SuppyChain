@@ -6,7 +6,7 @@ import {
     distributor_ABI,
     transport_ABI,
     product_ABI,
-    DigiChambers
+    DigiChambers as admin
 } from "../blockchain/blockchain.conn.mjs";
 
 import db from "../models/index.mjs";
@@ -34,7 +34,7 @@ router.get('/approve-reject-request', async (req, res)=>{
             else{
 
                 // update from blockchain digichambers
-                await DigiChambers.issueCeritificateofOrigin(result.CertificateID, { from: process.env.defaultAccount })
+                await admin.issueCeritificateofOrigin(result.CertificateID, { from: process.env.defaultAccount })
 
                 // final update on the database
                 await db.certificateRequest.updateOne(result, {
@@ -93,7 +93,7 @@ router.get('/approve-reject-request', async (req, res)=>{
     
     
 
-    res.redirect('/DigiChambers-Page')
+    res.redirect('/admin')
 })
 
 
@@ -110,7 +110,7 @@ router.get('/verify-cerificate', async(req, res)=>{
         if (result == null)
             return res.send({status : false});
         else{
-                const flag = await DigiChambers.verifyCeritificateofOrigin(Request.CertificateID)
+                const flag = await admin.verifyCeritificateofOrigin(Request.CertificateID)
                 console.log(flag)
                 if (flag == true)
                     return res.send({status : true});

@@ -40,7 +40,7 @@ router.post('/create-manufacturer', async (req, res)=>{
     // res.send(user); api result
 
     
-      res.redirect("/login-page");
+      res.redirect("/login");
 
 })
 
@@ -68,7 +68,7 @@ router.post('/create-distributor', async (req, res)=>{
     // final operation
     db.user.create(user);
     // res.send(user);
-    res.redirect("/login-page");
+    res.redirect("/login");
 })
 
 router.post('/create-retailer', async (req, res)=>{
@@ -94,7 +94,7 @@ router.post('/create-retailer', async (req, res)=>{
     // final operation
     db.user.create(user);
     // res.send(user);
-    res.redirect("/login-page");
+    res.redirect("/login");
 })
 
 router.post('/create-customer', async (req, res)=>{
@@ -121,7 +121,7 @@ router.post('/create-customer', async (req, res)=>{
     // final operation
     db.user.create(user);
     // res.send(user);
-    res.redirect("/login-page");
+    res.redirect("/login");
 })
 
 router.get('/login', async (req, res)=>{
@@ -145,19 +145,19 @@ router.get('/login', async (req, res)=>{
 
             // redirect to the respective page according to the role
             if (result.Role == "Manufacturer"){
-                return res.redirect('/manufacturer-Page');
+                return res.redirect('/manufacturer');
             }
             else if (result.Role == "Distributor"){
-                return res.redirect('/distributor-Page');
+                return res.redirect('/distributor');
             }
             else if (result.Role == "Retailer"){
-                return res.redirect('/retailer-Page');
+                return res.redirect('/retailer');
             }
             else if (result.Role == "Customer"){
                 
             }
-            else if (result.Role == "DigiChambers"){
-                return res.redirect('/DigiChambers-Page');
+            else if (result.Role == "DigiChambers"){     //  TODO: fix this if screwed
+                return res.redirect('/admin');
             }
         }
     });

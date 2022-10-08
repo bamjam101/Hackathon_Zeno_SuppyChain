@@ -100,26 +100,26 @@ app.get("/tracking", (req, res) => {
     res.render('Tracking', { page });
 })
 
-app.get("/menu", (req, res) => {
+app.get("/manufacturer", (req, res) => {
     
     const page = {
-        title: "Menu",
-        css: "css/menu.css",
-        js: "js/menu.js"
+        title: "Manufacturer",
+        css: "css/manufacturer.css",
+        js: "js/manufacturer.js"
     }
 
-    res.render('menu', { page });
+    res.render('manufacturer', { page });
 })
 
-app.get("/retail", (req, res) => {
+app.get("/retailer", (req, res) => {
 
     const page = {
-        title: "Retail",
-        css: "css/retail.css",
-        js: "js/retail.js"
+        title: "Retailer",
+        css: "css/retailer.css",
+        js: "js/retailer.js"
     }
 
-    res.render('retail', { page });
+    res.render('retailer', { page });
 })
 
 // To start the server 
