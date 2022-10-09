@@ -1,0 +1,498 @@
+.page-description {
+  color: rgba(0, 0, 0, 0);
+  margin: 15vh 0 15vh 0;
+  text-align: center;
+  font-size: 10vh;
+  justify-content: center;
+  font-weight: bold;
+  background-image: var(--flow);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200%;
+  background-position: left;
+  animation: motion 10s infinite alternate;
+}
+
+#text1 {
+  font-family: consolas;
+  padding-right: 16vw;
+  display: block;
+  animation: slide-right 1.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-right {
+  0% {
+    padding-right: 60vw;
+  }
+  100% {
+    padding-right: 18vw;
+  }
+}
+
+#text2 {
+  color: #c5c6c7;
+  animation: fade 5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+#text3 {
+  font-family: consolas;
+  padding-left: 16vw;
+  display: block;
+  animation: slide-left 1.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    padding-left: 60vw;
+  }
+  100% {
+    padding-left: 18vw;
+  }
+}
+
+@keyframes motion {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.title {
+  margin-top: 4em;
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  color: black;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 20px #1f2833;
+}
+
+.title:hover {
+  background-color: #1f2833;
+  width: 100%;
+  box-shadow: 0 0 20px #66fcf1, 0 0 40px #66fcf1, 0 0 80px #66fcf1;
+}
+
+.title h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8em;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.title h1:nth-child(1) {
+  position: absolute;
+  letter-spacing: 0.2em;
+}
+
+.title h1:nth-child(2) {
+  background-color: #f3f3f3;
+  transition: 1s;
+  color: #fff;
+  overflow: hidden;
+  z-index: 2;
+  /* transition: 0.1s; */
+  clip-path: polygon(0 0, 75% 20%, 0 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 75% 20%, 0 100%, 0% 100%);
+}
+
+.title:hover h1:nth-child(2) {
+  overflow: hidden;
+  background-color: #1f2833;
+}
+
+.title h1:nth-child(2):hover {
+  clip-path: polygon(0 1%, 100% 0, 99% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 1%, 100% 0, 99% 100%, 0% 100%);
+}
+
+.title h1:nth-child(1):hover ~ h1 {
+  -webkit-clip-path: polygon(0 1%, 100% 0, 100% 0, 0 0);
+  clip-path: polygon(0 1%, 100% 0, 100% 0, 0 0);
+}
+
+.center {
+  display: block;
+  margin: 16vh 0 16vh 0;
+  height: 80vh;
+  width: 100%;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: #667574;
+  transition: 1s;
+}
+
+.center:hover {
+  cursor: default;
+  border-radius: 16rem;
+  box-shadow: 0 0 20px #66fcf1, 0 0 40px #66fcf1, 0 0 80px #66fcf1;
+}
+
+.center .p {
+  text-align: center;
+  transform: translateY(20vh);
+  padding: 10vh 0 2vh 0;
+  color: #c5c6c7;
+  text-transform: uppercase;
+  display: block;
+  font-size: 16px;
+  letter-spacing: 2px;
+  transition: 1s;
+}
+
+.center:hover .p {
+  transform: translateY(0);
+  cursor: default;
+  color: #66fcf1;
+  text-shadow: 0 3px 15px whitesmoke;
+}
+
+/* ------------------------------------ */
+
+.center p {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-decoration: solid;
+  line-height: 4.5vh;
+  color: whitesmoke;
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.center:hover p {
+  opacity: 1;
+  text-shadow: 0 3px 15px #fff;
+}
+
+.ideas {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5vh;
+  opacity: -1;
+  text-transform: uppercase;
+  list-style-type: square;
+  color: white;
+  text-shadow: 0px 1px 5px #c5c6c7;
+  transform: translateY(10vh);
+  transition: 1s;
+}
+
+.center:hover .ideas {
+  letter-spacing: 2px;
+  transform: translateY(-15vh);
+  opacity: 1;
+}
+
+/* ------------------------------------ */
+
+.center a {
+  width: 15vw;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 10px;
+  margin-left: 45%;
+  text-decoration: none;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #757985;
+  background: #1f2833;
+  overflow: hidden;
+  transform: translateY(0.1rem);
+  transition: 1s;
+}
+
+.center:hover a {
+  transform: translateY(22.5vh);
+}
+
+.center a:hover {
+  color: white;
+  background-color: #0b0c31;
+  box-shadow: 0 0 30px #0b0c31, 0 0 60px #0b0c31, 0 0 90px #0b0c31;
+  transition-delay: 1s;
+}
+
+.center a span {
+  position: absolute;
+  display: block;
+}
+
+.center a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, white);
+}
+
+.center a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.center a span:nth-child(2) {
+  right: 0;
+  top: -100%;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, white);
+}
+
+.center a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.center a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(270deg, transparent, white);
+}
+
+.center a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.center a span:nth-child(4) {
+  left: 0;
+  bottom: -100%;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(360deg, transparent, white);
+}
+
+.center a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1rem 0;
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c5c6c7;
+  font-size: 2.6vh;
+  transition: 1s;
+}
+
+footer:hover {
+  cursor: default;
+  letter-spacing: 3px;
+  transform: translateY(-3vh);
+}
+
+@media(max-width: 1024px) {
+  .page-description {
+    margin: 5vh 0 10vh 0;
+    font-size: 8vh;
+  }
+
+  @keyframes slide-left {
+    0% {
+      padding-left: 30vw;
+    }
+    100% {
+      padding-left: 18vw;
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      padding-right: 30vw;
+    }
+    100% {
+      padding-right: 18vw;
+    }
+  }
+
+  .center {
+    line-height: 0.5vh;
+    margin-top: 5vh;
+    height: 50vh;
+    display: block;
+  }
+
+  .center:hover {
+    height: 60vh;
+  }
+
+  .center p {
+    font-size: 1.2rem;
+  }
+
+  .center .p {
+    font-size: 1.3rem;
+  }
+
+  .center a {
+    font-size: 1.3rem;
+    margin-left: 42vw;
+  }
+
+  .center ul li {
+    font-size: 1.2rem;
+  }
+
+  .center:hover a {
+    transform: translateY(10vh);
+  }
+}
+
+@media (max-width: 786px) {
+  .page-description {
+    margin: 30vh 0 50vh 0;
+  }
+
+  @keyframes slide-left {
+    0% {
+      padding-left: 30vw;
+    }
+    100% {
+      padding-left: 18vw;
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      padding-right: 30vw;
+    }
+    100% {
+      padding-right: 18vw;
+    }
+  }
+
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .center {
+    line-height: 2.5vh;
+    margin-top: 10vh;
+    height: 55vh;
+    clip-path: none;
+    display: block;
+  }
+
+  .ideas {
+    list-style: none;
+  }
+
+  .center p {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2vh;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .center:hover {
+    height: 70vh;
+  }
+
+  .center .p {
+    font-size: 1.3rem;
+  }
+
+  .center a {
+    margin-left: 30%;
+  }
+
+  .center:hover a {
+    transform: translateY(18vh);
+  }
+}
+
+@media (max-width: 320px) {
+
+  .page-description {
+    margin: 12vh 0 50vh 0;
+  }
+
+  @keyframes slide-left {
+    0% {
+      padding-left: 30vw;
+    }
+    100% {
+      padding-left: 18vw;
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      padding-right: 30vw;
+    }
+    100% {
+      padding-right: 18vw;
+    }
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .center {
+    line-height: 2.5vh;
+    margin-top: 10vh;
+    height: 65vh;
+    clip-path: none;
+    display: block;
+  }
+
+  .ideas {
+    list-style: none;
+  }
+
+  .center p {
+    margin-left: 2vh;
+    font-size: 1.2rem;
+    line-height: 2vh;
+  }
+
+  .center .p {
+    font-size: 1.3rem;
+  }
+
+  .center a {
+    margin-left: 30%;
+  }
+
+  .center:hover a {
+    transform: translateY(18vh);
+  }
+}

@@ -1,0 +1,268 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+  width: 100%;
+  height: 88vh;
+}
+
+.form {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 65vh;
+  width: 23vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  opacity: 1;
+  z-index: 1000;
+  transition: 1s;
+}
+
+.form form {
+  padding-top: 1.5vh;
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 100%;
+}
+
+.form label {
+  font-family: consolas;
+  position: relative;
+  display: flex;
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: 1s;
+}
+
+.form input {
+  display: flex;
+  justify-content: center;
+  background-color: #1f2833;
+  margin: 1.15vh 0;
+  border: rgba(0, 0, 0, 0.5) 0.1vh solid;
+  color: #c5c6c7;
+  border-radius: 0.6rem;
+  opacity: 0;
+}
+
+.toggle {
+  margin: none;
+  height: 1.4rem;
+  width: 1.4rem;
+  padding: 0 10vh;
+}
+
+.form:hover {
+  box-shadow: 0 0.5rem 0 -0.25rem #c5c6c7, 0 1rem 0 -0.5rem #45a29e,
+    0 1.35rem 0 -0.75rem #66fcf1;
+}
+
+.form:hover label {
+  opacity: 1;
+}
+
+.form:hover input {
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+#fname,
+#lname,
+#email {
+  height: 4vh;
+  width: 100%;
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.form form a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  height: 7.5vh;
+  padding: 0.2rem 2vh;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transform: translateY(-25vh);
+  transition: 1s;
+  animation: btn 3.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.change {
+  display: none;
+}
+
+.form:hover .hover {
+  display: none;
+}
+
+.form:hover .change {
+  display: inline;
+}
+
+@keyframes btn {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 12vh;
+  }
+}
+
+.form:hover a {
+  transform: translateY(0);
+}
+
+.form form a:hover {
+  border-radius: 0.65rem;
+  background: #66fcf1;
+  box-shadow: 0 0 10px #66fcf1, 0 0 40px #66fcf1, 0 0 80px #66fcf1;
+  color: black;
+  font-weight: bold;
+}
+
+input:hover {
+  box-shadow: 0px 0px 5px #c5c6c7;
+}
+
+/* ================form================== */
+
+.formTwo {
+  position: absolute;
+  transform: translateX(5vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 65vh;
+  width: 23vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  z-index: 2;
+  transition: 1s;
+}
+
+.formTwo:hover {
+  box-shadow: 0 0.5rem 0 -0.25rem #c5c6c7, 0 1rem 0 -0.5rem #45a29e,
+    0 1.35rem 0 -0.75rem #66fcf1;
+}
+
+.formTwo form {
+  position: relative;
+  display: block;
+  margin-top: 5vh;
+  width: 90%;
+  height: 100%;
+}
+
+.formTwo form label {
+  font-family: consolas;
+  position: relative;
+  display: flex;
+  color: #c5c6c7;
+  font-size: 1.2rem;
+  padding: 3px;
+  transition: 1s;
+  opacity: 0;
+}
+
+.formTwo input {
+  display: flex;
+  justify-content: center;
+  color: #c5c6c7;
+  background-color: #1f2833;
+  margin: 1.2vh 0;
+  border: rgba(0, 0, 0, 0.5) 0.1vh solid;
+  border-radius: 0.6rem;
+  opacity: 0;
+  transition: 1s;
+}
+
+.check {
+  margin-right: 1rem;
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+#username,
+#confirmPass,
+#password {
+  height: 4vh;
+  width: 100%;
+  text-align: center;
+}
+
+.formTwo:hover input {
+  opacity: 1;
+}
+
+.formTwo:hover form label {
+  opacity: 1;
+}
+
+.formTwo form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 4vh;
+  margin-left: 1rem;
+  border: 0;
+  align-content: center;
+  overflow: hidden;
+  color: white;
+  background-color: #757985;
+  height: 7.5vh;
+  width: 90%;
+  border-radius: 0.2rem;
+  clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 20% 53%, 0% 0%);
+  background-position: center;
+  background-size: cover;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.formTwo form button:hover {
+  font-weight: bold;
+  color: black;
+  margin-left: 3rem;
+  width: 70%;
+  transform: translateY(-5px);
+  border-radius: 6em;
+  background: #66fcf1;
+  box-shadow: 0 0 10px #66fcf1, 0 0 40px #66fcf1, 0 0 80px #66fcf1;
+}
+
+.formTwo form a {
+  transform: translateY(3px);
+  display: flex;
+  color: #c5c6c7;
+  padding-left: 0.5rem;
+  margin-top: 0.1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.formTwo {
+  opacity: 0;
+}

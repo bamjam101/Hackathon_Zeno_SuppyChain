@@ -1,0 +1,79 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="<%= page.css  %> " />
+  <script src="<%= page.js %> "></script>
+  <title>Title | <%= page.title %></title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+    :root {
+      --flow: linear-gradient(
+        45deg,
+        #c5c6c7,
+        #1f2833,
+        #45a29e,
+        #757985,
+        #66fcf1,
+        #0b0c10
+      );
+
+      --antiflow: linear-gradient(
+        #0b0c10,
+        #66fcf1,
+        #757985,
+        #45a29e,
+        #1f2833,
+        #c5c6c7
+      );
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #1f2833;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0.75em;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 100vw;
+      background: #1f2833;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(128, 128, 128, 0.753);
+      border-radius: 100vw;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c5c6c7c4;
+    }
+
+    @media(max-width: 1024px) {
+      * {
+        font-size: 90%;
+      }
+    }
+
+    @media (max-width: 786px) {
+      * {
+        font-size: 75%;
+      }
+    }
+
+    @media (max-width: 320px) {
+      * {
+        font-size: 70%;
+      }
+    }
+  </style>
+</head>

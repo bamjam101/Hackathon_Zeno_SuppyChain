@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ZENO Entry</title>
+</head>
+<style>
+	 :root {
+      --flow: linear-gradient(
+        45deg,
+        #c5c6c7,
+        #1f2833,
+        #45a29e,
+        #757985,
+        #66fcf1,
+        #0b0c10
+      );
+
+      --antiflow: linear-gradient(
+        #0b0c10,
+        #66fcf1,
+        #757985,
+        #45a29e,
+        #1f2833,
+        #c5c6c7
+      );
+    }
+body {
+	margin: 0;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	/* background: linear-gradient(to right bottom, rgb(148, 32, 250), rgb(252, 82, 244)); */
+	background-image: var(--flow);
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: white;
+    animation: flow 20s infinite alternate;
+}
+@keyframes flow {
+    0%{
+        background-position: left;
+    } 100% {
+        background-position: right;
+    }
+}
+
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+nav ul li {
+	font-size: 40px;
+	font-family: sans-serif;
+	background-color: #050505;
+        color: #ffffff;
+	/* border: 2px solid rgb(250, 221, 240); */
+	letter-spacing: 0.1em;
+	width: 10em;
+	height: 1.5em;
+	line-height: 1.5em;
+	position: relative;
+	overflow: hidden;
+	margin: 0.5em;
+	cursor: pointer;
+	background: transparent;
+}
+
+nav ul li span {
+	color: rgb(255, 255, 255);
+	mix-blend-mode: difference;
+}
+
+nav ul li::before {
+	content: '';
+	position: absolute;
+	width: 1.5em;
+	height: inherit;
+	background-color: rgb(255, 255, 255);
+	border-radius: 50%;
+	top: 0;
+	left: -0.68em;
+	transition: 1s ease-out;
+}
+
+nav ul li:hover::before {
+	transform: scale(20.7);
+}
+
+a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><span><a href ="/login-page">LOGIN</a></span></li>
+            <li><span><a href ="/signup">SIGN UP</a></span></li>
+        </ul>
+      </nav>
+</body>
+
+</html>

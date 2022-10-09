@@ -44,11 +44,11 @@ app.set('view engine', 'ejs')
 
 // get routes for all the webpages
 
-app.get("/", (req, res) => {
-    res.redirect('/home');
-})
+// app.get("/", (req, res) => {
+//     res.redirect('/home');
+// })
 
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
     const page = {
         title: "Home",
         css: "css/home.css",
@@ -101,7 +101,7 @@ app.get("/tracking", (req, res) => {
         js: "js/tracking.js"
     }
 
-    res.render('Tracking', { page });
+    res.render('Tracking', { page, Data: {} });
 })
 
 app.get("/instructions", (req, res) => {
@@ -123,7 +123,7 @@ app.get("/manufacturer", (req, res) => {
         js: "js/manufacturer.js"
     }
 
-    res.render('MainPage_manu', { page });
+    res.render('MainPage_manu', {page});
 })
 
 app.get("/retailer", (req, res) => {
@@ -138,7 +138,7 @@ app.get("/retailer", (req, res) => {
 })
 
 // To start the server 
-app.listen(5000, () => {
+app.listen(2000, () => {
     console.log("LISTENING ON PORT 5000")
 })
 
