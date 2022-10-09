@@ -63,7 +63,7 @@ router.post('/produce-material', async (req, res) => {
     // });
 
     // res.send({ Success: true });
-    return res.redirect('/manufacturer');
+    return res.redirect('/manufacturer-Page');
 
 });
 
@@ -79,7 +79,7 @@ router.post('/accept-request', async (req, res) => {
     await db.productRequest.findOne({ Product: req.body.Product, Material:req.body.Material, IsActive : true }).then(async (result) => {
         console.log(result);
         if (result == null)
-            return res.redirect('/manufacturer');
+            return res.redirect('/manufacturer-Page');
 
         // const _capacity = await contractInstance.methods.available(result.Material).call();
         const productContract = await new web3.eth.Contract(product_ABI, result.Product);
@@ -139,12 +139,12 @@ router.post('/accept-request', async (req, res) => {
             //    await web3.eth.sendTransaction({from : result.Product, to : user.eth_Account,  value :result.Price});
                 console.log("good")
                 // res.send({Success : true})
-                return res.redirect('/manufacturer');
+                return res.redirect('/manufacturer-Page');
             }
             else {
                 // res.send({ Success: false, Status: "Cannot fulfill the request" })
                 console.log("ded")
-                return res.redirect('/manufacturer');
+                return res.redirect('/manufacturer-Page');
             }
         })
 
@@ -183,7 +183,7 @@ router.post('/send-raw-material-tender', async (req, res)=>{
     })
 
 
-    res.redirect('/manufacturer');
+    res.redirect('/manufacturer-page');
 
 
 })

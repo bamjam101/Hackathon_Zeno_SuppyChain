@@ -45,7 +45,7 @@ router.post('/create-product', async (req, res) => {
     await db.product.create(product);
 
     // res.send({ Success: true });
-    res.redirect('/retailer');
+    res.redirect('/retailer-page');
 });
 
 // set Request for Raw Materials
@@ -95,10 +95,10 @@ router.post('/setup-raw-material-request', async (req, res) => {
             });
 
             // res.send({ Success: true })
-            res.redirect('/retailer');
+            res.redirect('/retailer-page');
         }
         else
-            res.redirect('/retailer');
+            res.redirect('/retailer-page');
             // return res.send({ Success: false })
     })
 
@@ -124,7 +124,7 @@ router.post('/approve-raw-material-tender', async(req, res)=>{
         // console.log(result);
         console.log("result", result)
         if (result == null)
-            return res.redirect('/retailer');
+            return res.redirect('/retailer-Page');
 
     const productContract = await new web3.eth.Contract(product_ABI, result.Product);
          
@@ -190,12 +190,12 @@ router.post('/approve-raw-material-tender', async(req, res)=>{
             //    await web3.eth.sendTransaction({from : result.Product, to : user.eth_Account,  value :result.Price});
                 console.log("good")
                 // res.send({Success : true})
-                return res.redirect('/retailer');
+                return res.redirect('/retailer-Page');
             }
             else {
                 // res.send({ Success: false, Status: "Cannot fulfill the request" })
                 console.log("ded")
-                return res.redirect('/retailer');
+                return res.redirect('/retailer-Page');
             }
         })
 
@@ -274,7 +274,8 @@ router.post('/confirm-fulfillment-of-request', async (req, res) => {
             
             
             // pay the distributor his money from smart contract
-            res.redirect('/retailer');
+            // 
+            res.redirect('/retailer-page');
         }
     })
 

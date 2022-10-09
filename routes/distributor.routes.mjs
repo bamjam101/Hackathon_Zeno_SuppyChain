@@ -41,7 +41,7 @@ router.post('/accept-request', async (req, res) => {
     })  
 
     // res.send({Success : true })
-    res.redirect('/distributor');
+    res.redirect('/distributor-Page');
 
 })
 
