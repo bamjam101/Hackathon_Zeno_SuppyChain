@@ -317,50 +317,10 @@ footer:hover {
   transform: translateY(-3vh);
 }
 
-media(max-width: 1024px) {
-  * {
-    font-size: 50%;
-  }
-
-  .nav-bar {
-    height: 30vh;
-  }
-
-  .nav-logo {
-    position: relative;
-    transform: translateX(2vh) translateY(0);
-    font-weight: bold;
-    max-width: 98vw;
-  }
-
-  .nav-logo p {
-    font-size: 3.6rem;
-  }
-
-  .menu a {
-    display: block;
-  }
-
-  .nav-bar ul {
-    display: block;
-    list-style: none;
-    text-decoration: none;
-  }
-
-  nav ul li {
-    display: block;
-    line-height: 4vh;
-    transform: translateY(0);
-    text-align: right;
-  }
-
-  nav ul li a {
-    font-size: 1rem;
-  }
-
+@media(max-width: 1024px) {
   .page-description {
     margin: 5vh 0 10vh 0;
-    font-size: 14vh;
+    font-size: 8vh;
   }
 
   @keyframes slide-left {
@@ -379,22 +339,6 @@ media(max-width: 1024px) {
     100% {
       padding-right: 18vw;
     }
-  }
-
-  /* -------------------------------title/float/center---------------------------------------- */
-
-  .title {
-    font-size: 2.5vh;
-  }
-
-  .float {
-    margin-top: 14vh;
-    height: 40vh;
-  }
-
-  .prop div {
-    height: 20vh;
-    width: 20vh;
   }
 
   .center {
@@ -409,89 +353,30 @@ media(max-width: 1024px) {
   }
 
   .center p {
-    font-size: 2.1rem;
+    font-size: 1.2rem;
   }
 
   .center .p {
-    font-size: 2.4rem;
+    font-size: 1.3rem;
   }
 
   .center a {
-    font-size: 2.1rem;
+    font-size: 1.3rem;
     margin-left: 42vw;
   }
 
   .center ul li {
-    font-size: 2.1rem;
+    font-size: 1.2rem;
   }
 
   .center:hover a {
     transform: translateY(10vh);
   }
-
-  /* -------------------------CARD------------------------ */
-  .container {
-    display: flex;
-    position: relative;
-    width: 40vw;
-    display: inline-block;
-    /* margin-bottom: 16vh; */
-    margin-left: 30%;
-  }
-
-  .container .card {
-    position: absolute;
-    display: block;
-    height: 45vh;
-    width: 35vh;
-    left: -25vh;
-    transform: translateY(-100vh);
-  }
 }
 
 @media (max-width: 786px) {
-  * {
-    font-size: 40%;
-  }
-
-  .nav-logo {
-    transform: translateX(3vh) translateY(11vh);
-    font-weight: bold;
-    max-width: 90vw;
-  }
-
-  .nav-logo p {
-    font-size: 3rem;
-  }
-
-  .nav-bar {
-    display: block;
-    height: 30vh;
-  }
-
-  .nav-bar ul {
-    list-style: none;
-    text-decoration: none;
-  }
-
-  nav ul li {
-    display: block;
-    line-height: 4vh;
-    transform: translateY(-3.5vh);
-    text-align: right;
-  }
-
-  nav ul li a {
-    font-size: 1rem;
-  }
-
-  .menu a {
-    display: inline-block;
-  }
-
   .page-description {
-    margin: 12vh 0 50vh 0;
-    font-size: 14vh;
+    margin: 30vh 0 50vh 0;
   }
 
   @keyframes slide-left {
@@ -512,21 +397,9 @@ media(max-width: 1024px) {
     }
   }
 
-  /* -------------------------------title/float/center---------------------------------------- */
 
   .title {
-    font-size: 2vh;
-  }
-
-  .float {
-    margin-top: 10vh;
-    height: 55vh;
-    clip-path: none;
-  }
-
-  .prop div {
-    height: 30vh;
-    width: 30vh;
+    font-size: 1.5rem;
   }
 
   .center {
@@ -545,8 +418,8 @@ media(max-width: 1024px) {
     display: flex;
     justify-content: space-between;
     margin-left: 2vh;
-    font-size: 2.4rem;
-    line-height: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
   .center:hover {
@@ -554,7 +427,7 @@ media(max-width: 1024px) {
   }
 
   .center .p {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .center a {
@@ -564,74 +437,12 @@ media(max-width: 1024px) {
   .center:hover a {
     transform: translateY(18vh);
   }
-
-  /* -------------------------CARD------------------------ */
-  .container {
-    position: relative;
-    width: 40vw;
-    display: inline-block;
-    /* margin-bottom: 16vh; */
-    margin-left: 25%;
-  }
-
-  .container:hover {
-    display: block;
-  }
-
-  .container .card {
-    display: block;
-    height: 45vh;
-    width: 35vh;
-    left: -20vh;
-    transform: translateY(-130vh);
-  }
 }
 
 @media (max-width: 320px) {
-  * {
-    font-size: 30%;
-  }
-
-  .nav-logo {
-    display: inline-block;
-    transform: translateX(3vh) translateY(11vh);
-    font-weight: bold;
-    max-width: 90vw;
-  }
-
-  .nav-logo p {
-    font-size: 3rem;
-  }
-
-  .nav-bar {
-    display: block;
-    height: 27.5vh;
-  }
-
-  .nav-bar ul {
-    display: block;
-    list-style: none;
-    text-decoration: none;
-  }
-
-  nav ul li {
-    display: block;
-    line-height: 4vh;
-    transform: translateY(-3.5vh);
-    text-align: right;
-  }
-
-  nav ul li a {
-    font-size: 1rem;
-  }
-
-  .menu a {
-    display: inline-block;
-  }
 
   .page-description {
     margin: 12vh 0 50vh 0;
-    font-size: 14vh;
   }
 
   @keyframes slide-left {
@@ -651,23 +462,8 @@ media(max-width: 1024px) {
       padding-right: 18vw;
     }
   }
-
-  /* -------------------------------title/float/center---------------------------------------- */
-
   .title {
-    font-size: 2vh;
-  }
-
-  .float {
-    margin-top: 10vh;
-    height: 55vh;
-    clip-path: none;
-    /* display: block; */
-  }
-
-  .prop div {
-    height: 22vh;
-    width: 22vh;
+    font-size: 1.5rem;
   }
 
   .center {
@@ -684,12 +480,12 @@ media(max-width: 1024px) {
 
   .center p {
     margin-left: 2vh;
-    font-size: 2.4rem;
+    font-size: 1.2rem;
     line-height: 2vh;
   }
 
   .center .p {
-    font-size: 2.1rem;
+    font-size: 1.3rem;
   }
 
   .center a {
@@ -698,26 +494,5 @@ media(max-width: 1024px) {
 
   .center:hover a {
     transform: translateY(18vh);
-  }
-
-  /* -------------------------CARD------------------------ */
-  .container {
-    position: relative;
-    width: 40vw;
-    display: inline-block;
-    /* margin-bottom: 16vh; */
-    margin-left: 25%;
-  }
-
-  .container:hover {
-    display: block;
-  }
-
-  .container .card {
-    display: block;
-    height: 45vh;
-    width: 35vh;
-    left: -20vh;
-    transform: translateY(-130vh);
   }
 }

@@ -45,12 +45,16 @@ app.set('view engine', 'ejs')
 // get routes for all the webpages
 
 app.get("/", (req, res) => {
+    res.redirect('/home');
+})
+
+app.get("/home", (req, res) => {
     const page = {
         title: "Home",
         css: "css/home.css",
         js: "js/home.js"
     }
-    res.render('home', { page });
+    res.render('index', { page });
 })
 
 app.get("/register", (req, res) => {
@@ -59,7 +63,7 @@ app.get("/register", (req, res) => {
         css: "css/register.css",
         js: "js/register.js"
     }
-    res.render('register', { page });
+    res.render('Login_Signup', { page });
 })
 
 app.get("/login", (req, res) => {
@@ -77,7 +81,7 @@ app.get("/admin", (req, res) => {
         css: "css/admin.css",
         js: "js/admin.js"
     }
-    res.render('admin', { page });
+    res.render('MainPage_digiChambers', { page });
 })
 
 app.get("/distributor", (req, res) => {
@@ -86,7 +90,7 @@ app.get("/distributor", (req, res) => {
         css: "css/distributor.css",
         js: "js/distributor.js"
     }
-    res.render('distributor', { page });
+    res.render('MainPage_distr', { page });
 })
 
 app.get("/tracking", (req, res) => {
@@ -100,6 +104,17 @@ app.get("/tracking", (req, res) => {
     res.render('Tracking', { page });
 })
 
+app.get("/instructions", (req, res) => {
+
+    const page = {
+        title: "Instructions",
+        css: "css/instructions.css",
+        js: "js/instructions.js"
+    }
+
+    res.render('Intructions', { page });
+})
+
 app.get("/manufacturer", (req, res) => {
     
     const page = {
@@ -108,7 +123,7 @@ app.get("/manufacturer", (req, res) => {
         js: "js/manufacturer.js"
     }
 
-    res.render('manufacturer', { page });
+    res.render('MainPage_manu', { page });
 })
 
 app.get("/retailer", (req, res) => {
@@ -119,7 +134,7 @@ app.get("/retailer", (req, res) => {
         js: "js/retailer.js"
     }
 
-    res.render('retailer', { page });
+    res.render('MainPage_retail', { page });
 })
 
 // To start the server 
