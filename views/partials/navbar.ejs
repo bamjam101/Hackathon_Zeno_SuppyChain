@@ -8,9 +8,12 @@
             <li class="menu"><a href="/">Home</a></li>
             <li class="menu"><a href="notice.html">Notice</a></li>
             <% if(page.title !='Home' ){ %>
+                <% if(page.title != "Register") {%> 
+                    <li class="menu"><a href="/register">Register</a></li>
+                <% } else if(page.title != "Login") {%> 
                 <li class="menu"><a href="/login">Login</a></li>
-                <li class="menu"><a href="/register">Register</a></li>
-            <% } %>
+                <% } %>
+            <% } %> 
         </ul>
     </nav>
 </header>
@@ -112,5 +115,111 @@
     .menu a:hover {
         color: white;
         text-shadow: 0 0 20px;
+    }
+
+    @media(max-width: 1024px) {
+
+      .nav-logo p {
+        font-size: 1.6rem;
+      }
+
+      .menu a {
+        display: block;
+      }
+
+      .nav-bar ul {
+        display: block;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      nav ul li {
+        display: block;
+        line-height: 4vh;
+        transform: translateY(0);
+        text-align: right;
+      }
+
+      nav ul li a {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 786px) {
+        .nav-bar {
+          height: 22.5vh;
+        }
+
+      .nav-logo {
+        transform: translateX(3vh) translateY(8vh);
+        font-weight: bold;
+        max-width: 90vw;
+      }
+
+      .nav-logo p {
+        font-size: 3rem;
+      }
+
+      .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      nav ul li {
+        display: block;
+        line-height: 4vh;
+        text-align: right;
+      }
+
+      nav ul li a {
+        font-size: 1rem;
+      }
+
+      .menu a {
+        display: inline-block;
+      }
+
+    }
+
+    @media (max-width: 320px) {
+        .nav-bar {
+          display: block;
+          height: 25vh;
+        }
+      .nav-logo {
+        display: inline-block;
+        transform: translateX(3vh) translateY(6vh);
+        font-weight: bold;
+        max-width: 90vw;
+      }
+
+      .nav-logo p {
+        font-size: 3rem;
+      }
+
+
+      .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      nav ul li {
+        display: block;
+        line-height: 4vh;
+        transform: translateY(-3.5vh);
+        text-align: right;
+      }
+
+      nav ul li a {
+        font-size: 1rem;
+      }
+
+      .menu a {
+        display: inline-block;
+      }
     }
 </style>
